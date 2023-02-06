@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 movementAxis;
     public float horizontalSpeed;
     public float speed = 2;
+    public float maxOffset = 10;
     Rigidbody2D rb2D;
 
     // Start is called before the first frame update
@@ -18,8 +19,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetKeyDown("space"))
+        if (Mathf.Abs(transform.position.x) >= maxOffset || Input.GetKeyDown("space"))
         {
             movementAxis *= -1;
         }
