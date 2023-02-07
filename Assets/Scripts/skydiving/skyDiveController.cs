@@ -16,7 +16,7 @@ public class skyDiveController : MonoBehaviour
     public bool isHit = false;
     public float deathTimer = 4;
     bool hasSpawned = false;
-
+    public string nextScene;
 
 
     // Start is called before the first frame update
@@ -93,7 +93,10 @@ public class skyDiveController : MonoBehaviour
         {
             //Get Sprite back to center
 
-            if(transform.position.x < -1)
+            mySpriteRenderer.sprite = deathSprite;
+
+
+            if (transform.position.x < -1)
             {
                 vel.x = 4;
             }
@@ -111,7 +114,7 @@ public class skyDiveController : MonoBehaviour
             if (vel.x == 0 && hasSpawned == false)
             {
                 Vector3 spawnPosition = transform.position;
-                spawnPosition += new Vector3(0, -20, 0);
+                spawnPosition += new Vector3(0, -20, 0.5f);
                 // the Instatiate function creates a new GameObject copy (clone) from a Prefab at a specific location and orientation.
                 Instantiate(forestBackground, spawnPosition, Quaternion.identity);
 
@@ -122,9 +125,11 @@ public class skyDiveController : MonoBehaviour
             if (hasSpawned)
             {
                 deathTimer -= Time.deltaTime;
-                if(frameTimer <= 0)
+                if(deathTimer <= 0)
                 {
                     vel.y = 0;
+
+                    SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
                 }
             }
 
@@ -158,6 +163,6 @@ public class skyDiveController : MonoBehaviour
         spriteList[1] = deathSprite;
         spriteList[2] = deathSprite;
 
-        
+
     }
 }
