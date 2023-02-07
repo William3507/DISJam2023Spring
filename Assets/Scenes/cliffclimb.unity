@@ -348,6 +348,8 @@ MonoBehaviour:
   horizontalSpeed: 5
   speed: 2
   maxOffset: 9
+  obstacleTag: obstacle
+  nextScene: skydiving
 --- !u!114 &114116921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,6 +820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 114116917}
+  offsetY: 3
 --- !u!114 &1213606925
 MonoBehaviour:
   m_ObjectHideFlags: 0

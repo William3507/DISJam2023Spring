@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/cliffclimb.unity
+    guid: 84ba392ff0a9741459583ee503397467
+  - enabled: 1
+    path: Assets/Scenes/skydiving.unity
+    guid: def0793973e2d40268a9067c7595112f
+  - enabled: 1
+    path: Assets/Scenes/Snowboarding.unity
+    guid: 9337eeaa361c3954d83a6a1accb5ba15
   m_configObjects: {}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraControllerAss : MonoBehaviour
 {
     public Transform player;
-    private float offsetY = 3;
+    public float offsetY = 3;
 
     // Start is called before the first frame update
     void Start()
