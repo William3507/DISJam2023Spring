@@ -19,13 +19,18 @@ public class AsteroidSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            SpawnObstacle();
+            timer = Random.Range(spawnTimerMin, spawnTimerMax);
+        }
     }
 
     void SpawnObstacle()
     {
         GameObject obstacle = obstacles[Random.Range(0, obstacles.Length)];
-        //spawnPosition
-        //Instantiate(obstacle, spawnPositionDown, Quaternion.identity);
+        Vector2 spawnPosition = new Vector2 (Random.Range(-maxOffset, maxOffset), transform.position.y);
+        Instantiate(obstacle, spawnPosition, Quaternion.identity);
     }
 }
