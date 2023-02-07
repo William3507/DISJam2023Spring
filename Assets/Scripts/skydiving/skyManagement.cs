@@ -5,7 +5,7 @@ using UnityEngine;
 public class skyManagement : MonoBehaviour
 {
     private float timer;
-    public float spawnTimer = 15;
+    public float spawnTimer = 20;
 
     // Start is called before the first frame update
     void Start()

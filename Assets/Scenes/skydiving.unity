@@ -411,7 +411,7 @@ MonoBehaviour:
   deathSprite: {fileID: -971834838, guid: aa671d849c076494699355533f7bfcbb, type: 3}
   forestBackground: {fileID: 1507147455}
   isHit: 0
-  deathTimer: 7
+  deathTimer: 5
   nextScene: Snowboarding
 --- !u!61 &486784137
 BoxCollider2D:
