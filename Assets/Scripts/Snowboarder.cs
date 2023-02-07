@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Snowboarder : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Snowboarder : MonoBehaviour
     public float verticalspeed;
     public float speed = 2;
     public float max;
+    public string obstacleTag = "obstacle";
+    public string nextScene;
     Rigidbody2D rb2d; 
     void Start()
     {
@@ -23,5 +26,13 @@ public class Snowboarder : MonoBehaviour
             movementAxis *= -1;
         }
         rb2d.velocity = movementAxis * verticalspeed + Vector2.right * speed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag(obstacleTag))
+        {
+            SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+        }
     }
 }

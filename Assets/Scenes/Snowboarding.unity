@@ -357,6 +357,8 @@ MonoBehaviour:
   verticalspeed: 2
   speed: 2
   max: 4
+  obstacleTag: obstacle
+  nextScene: cliffclimb
 --- !u!1 &1577925724
 GameObject:
   m_ObjectHideFlags: 0
