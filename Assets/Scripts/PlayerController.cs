@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float horizontalSpeed;
     public float speed = 2;
     public float maxOffset = 10;
+    public string obstacleTag = "obstacle";
+    public string nextScene;
     Rigidbody2D rb2D;
 
     // Start is called before the first frame update
@@ -24,5 +27,13 @@ public class PlayerController : MonoBehaviour
             movementAxis *= -1;
         }
         rb2D.velocity = movementAxis * horizontalSpeed + Vector2.up * speed;
+    }
+
+    void OnCollisionEnter2D (Collision2D col)
+    {
+        if (col.gameObject.CompareTag(obstacleTag))
+        {
+            SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+        }
     }
 }
