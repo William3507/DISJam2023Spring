@@ -7,8 +7,8 @@ public class backgroundMovement : MonoBehaviour
 
     public GameObject backImage;
     private float timer;
+    public float distance;
     public float spawnTimer;
-    public Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +30,7 @@ public class backgroundMovement : MonoBehaviour
     }
     void SpawnNewBackground()
     {
-
-        Vector3 spawnPosition = transform.position + Vector3.down * 20f;
+        Vector3 spawnPosition = transform.position + Vector3.down * distance;
         spawnPosition.z = 1;
         Instantiate(backImage, spawnPosition, Quaternion.identity);
     }

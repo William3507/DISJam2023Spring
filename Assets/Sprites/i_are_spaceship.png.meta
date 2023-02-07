@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8b3c18e41897e49cbbbfd3687af8bb24
+guid: 3f65e10acdcc2484d9e2cebd7a192d88
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: astronaut_3
+      name: small_asteroid
       rect:
         serializedVersion: 2
-        x: 82
-        y: 382
-        width: 196
-        height: 351
+        x: 32
+        y: 49
+        width: 15
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc8b9e7d5aab54cfe8973b797393351d
-      internalID: -1359442152
+      spriteID: 6a3e78ff1d8264cc69ac66386141cdd7
+      internalID: -180220425
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      astronaut_3: -1359442152
+      small_asteroid: -180220425
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
