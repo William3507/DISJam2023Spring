@@ -11,6 +11,7 @@ public class birdBehavior : MonoBehaviour
     float frameTimer;
     int currentFrame;
     private Rigidbody2D rb2D;
+    float lifeTimer;
 
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class birdBehavior : MonoBehaviour
 
         frameTimer = 0;
         currentFrame = 0;
+        lifeTimer = 8;
 
     }
 
@@ -28,6 +30,7 @@ public class birdBehavior : MonoBehaviour
     void Update()
     {
         frameTimer -= Time.deltaTime;
+        lifeTimer -= Time.deltaTime;
         if (frameTimer <= 0)
         {
             mySpriteRenderer.sprite = spriteList[currentFrame];
@@ -42,8 +45,15 @@ public class birdBehavior : MonoBehaviour
 
         Vector2 vel = rb2D.velocity;
 
-        vel.x = -5;
+        vel.x = -3;
+        vel.y = -3f;
 
         rb2D.velocity = vel;
+
+
+        if(lifeTimer <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

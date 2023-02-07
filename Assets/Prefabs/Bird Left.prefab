@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4703934687627137514}
   - component: {fileID: 6802878055863303114}
   - component: {fileID: -3113319598478867492}
+  - component: {fileID: 5309549384273058290}
   m_Layer: 0
   m_Name: Bird Left
   m_TagString: Untagged
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpriteRenderer: {fileID: 0}
-  animationFPS: 0
+  animationFPS: 9
   spriteList:
   - {fileID: 1068282597, guid: d092cc1f9a30a44ce8127d8aba3294c8, type: 3}
   - {fileID: -427290547, guid: d092cc1f9a30a44ce8127d8aba3294c8, type: 3}
@@ -126,3 +127,24 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!50 &5309549384273058290
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460184138709603626}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

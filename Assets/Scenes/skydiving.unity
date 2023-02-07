@@ -264,6 +264,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 555126551}
+  - {fileID: 1387558960}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -400,6 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733c9e2c63ad24afc84290f88a21a8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &555126550
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backImage: {fileID: 1508260762887194987, guid: 2370c1457bf12420fa029a6bf3f9c97b, type: 3}
-  spawnTimer: 5.1
+  spawnTimer: 5
   player: {fileID: 0}
 --- !u!212 &555126553
 SpriteRenderer:
@@ -636,6 +638,53 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1387558959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387558960}
+  - component: {fileID: 1387558961}
+  m_Layer: 0
+  m_Name: birdSpawnerLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1387558960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387558959}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.01, y: -4.89, z: 1.3391199}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 103194244}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1387558961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387558959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2390cc62f2894716bf95ac6a47abe10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnWidth: 15
+  spawnRate: 0.33
+  birdPrefab: {fileID: 460184138709603626, guid: 458a77a60c5f24cd69c89a4c71704b38, type: 3}
 --- !u!4 &2060992297 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1508260762887194981, guid: 2370c1457bf12420fa029a6bf3f9c97b, type: 3}
